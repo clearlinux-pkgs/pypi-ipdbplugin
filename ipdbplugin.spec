@@ -4,7 +4,7 @@
 #
 Name     : ipdbplugin
 Version  : 1.5.0
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Summary  : Nose plugin to use iPdb instead of Pdb when tests fail
