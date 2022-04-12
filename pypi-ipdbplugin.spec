@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipdbplugin
 Version  : 1.5.0
-Release  : 24
+Release  : 25
 URL      : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Summary  : Nose plugin to use iPdb instead of Pdb when tests fail
@@ -51,7 +51,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641512035
+export SOURCE_DATE_EPOCH=1649765482
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
