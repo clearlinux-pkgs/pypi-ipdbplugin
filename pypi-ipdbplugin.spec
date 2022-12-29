@@ -4,7 +4,7 @@
 #
 Name     : pypi-ipdbplugin
 Version  : 1.5.0
-Release  : 33
+Release  : 34
 URL      : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cf/cb/510dcb9ae401e6876415412f0cc7bd2df8f7e9eb6667c23a2bd941309b88/ipdbplugin-1.5.0.tar.gz
 Summary  : Nose plugin to use iPdb instead of Pdb when tests fail
@@ -15,6 +15,9 @@ Requires: pypi-ipdbplugin-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(ipython)
 BuildRequires : pypi(nose)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Use this and *never* risk yourself forgetting `import ipdb; ipdb.set_trace()` in your code again!
@@ -54,12 +57,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656399401
+export SOURCE_DATE_EPOCH=1672282279
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$FFLAGS -fno-lto "
-export FFLAGS="$FFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
